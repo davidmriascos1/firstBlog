@@ -1,4 +1,3 @@
-# firstblog
 
 # My First Blog Project
 This is a simple blogging application built using Node.js, Express, and EJS. It's a beginner-friendly project to help understand how server-side rendering works using EJS along with dynamic content in an Express.js environment.
