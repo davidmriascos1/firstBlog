@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+  <h1>David Riascos Personal Blog ✍️</h1>
+  <form action="/submit" method="POST">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><h3>Title</h3></label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Title of your blog" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><h3>Write your post</h3></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textbox" placeholder="Write your thoughts here" ></textarea>
+  </div>   
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Create a blog</button>
+  </div>
+</form>
+
+
+
+<!--•	post => {: This is an arrow function used for each element in the posts array.
+	•	post: This is just the name given to each item in the array during the loop. You can name it anything (like item, postItem, etc.), but here it’s called post to make the code more readable, indicating that each element in the array is a blog post.
+	•	During each iteration of the forEach(), post will represent an individual post object that contains a title and content (because that’s how you stored each post in your “database” array in your Express code).-->
+    <% posts.forEach((post, index) => { %>
+        <div class="post">  
+            <div class="each-post">
+          <h3 class="post-title"><%= post.title %></h3>
+          <p class="post-content"><%= post.content %></p>
+        </div>
+          <!-- Edit Button -->
+          <form action="/edit/<%= index %>" method="GET">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Edit</button>
+              </div>
+          </form>
+          <!-- Delete Button -->
+          <form action="/delete/<%= index %>" method="POST">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Delete</button>
+              </div>
+          </form>
+        </div>
+      <% }); %>
+

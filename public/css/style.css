@@ -1,0 +1,54 @@
+/* Center the entire container */
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px; /* Set a max width for better centering control */
+    padding: 20px;
+    background-color: #CBE2B5; 
+    border-radius: 10px;
+}
+
+/* Make the form smaller and centered */
+.form-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for each post */
+.each-post {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Title styling for posts */
+.post-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Align form buttons better */
+.form-container button, .each-post button {
+    width: 100%;
+}
+
+/* Adjust body styling for full-page centering */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #CBE2B5;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Replace with your preferred font */
+}
